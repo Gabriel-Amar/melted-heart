@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melted Heart — La creazione artigianale</title>
+  <title>Melted Heart — Un regalo fatto col cuore</title>
   <meta name="description"
-    content="Scopri la creazione artigianale dello specchio Melted Heart: un cuore sciolto modellato a mano, fase dopo fase." />
+    content="Scopri la creazione artigianale dello specchio Melted Heart: un cuore sciolto modellato a mano passo dopo passo per il tuo compleanno." />
 
   <!-- Google Fonts: Cormorant Garamond (luxury serif) + Inter (clean sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +68,8 @@
       overscroll-behavior: none;
     }
 
-    html.lenis, html.lenis body {
+    html.lenis,
+    html.lenis body {
       height: auto;
     }
 
@@ -135,7 +136,7 @@
       top: -22px;
       left: -22px;
       transition: transform 0.4s var(--ease-out-expo),
-                  border-color 0.3s ease;
+        border-color 0.3s ease;
     }
 
     .cursor--hovering .cursor__dot {
@@ -169,8 +170,13 @@
     }
 
     @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
     }
 
     /* ── Navigation Dots ─────────────────────────────────── */
@@ -187,7 +193,9 @@
       transition: opacity 0.6s ease;
     }
 
-    .nav-dots.is-visible { opacity: 1; }
+    .nav-dots.is-visible {
+      opacity: 1;
+    }
 
     .nav-dot {
       width: 10px;
@@ -309,7 +317,7 @@
       line-height: 1.0;
       margin-bottom: 1.5rem;
       opacity: 0;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .hero__title .char {
@@ -335,6 +343,7 @@
       max-width: 560px;
       letter-spacing: 0.02em;
       line-height: 1.7;
+      opacity: 0;
     }
 
     .hero__subtitle .line {
@@ -394,9 +403,19 @@
     }
 
     @keyframes scroll-arrow {
-      0% { top: -100%; opacity: 0; }
-      50% { opacity: 1; }
-      100% { top: 100%; opacity: 0; }
+      0% {
+        top: -100%;
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        top: 100%;
+        opacity: 0;
+      }
     }
 
     /* ── Scroll-Tell Wrapper ─────────────────────────────── */
@@ -432,18 +451,50 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: min(75vw, 520px);
-      max-height: 72vh;
-      width: auto;
-      height: auto;
+      width: min(75vw, 520px);
+      height: 65vh;
       object-fit: contain;
       will-change: opacity, transform;
       border-radius: 4px;
     }
 
-    .image-stage__img--1 { opacity: 1; }
-    .image-stage__img--2 { opacity: 0; }
-    .image-stage__img--3 { opacity: 0; }
+    .image-stage__img--1 {
+      opacity: 1;
+    }
+
+    .image-stage__img--2 {
+      opacity: 0;
+    }
+
+    .image-stage__img--3 {
+      opacity: 0;
+    }
+
+    .image-stage__img--4 {
+      opacity: 0;
+    }
+
+    .image-stage__img--5 {
+      opacity: 0;
+    }
+
+    .image-stage__img--6 {
+      opacity: 0;
+    }
+
+    .image-stage__img--7 {
+      opacity: 0;
+    }
+
+    .image-stage__img--8 {
+      opacity: 0;
+    }
+
+    /* Keep the scroll hint visible when inside the image stage */
+    .image-stage__scroll-hint {
+      opacity: 1;
+      z-index: 10;
+    }
 
     /* ── Text Steps ──────────────────────────────────────── */
     .steps-wrapper {
@@ -468,12 +519,10 @@
       transform: translateY(60px) rotate(0.5deg);
 
       /* Hyper-realistic glass morphism */
-      background: linear-gradient(
-        135deg,
-        rgba(255, 252, 249, 0.78) 0%,
-        rgba(255, 250, 247, 0.62) 50%,
-        rgba(248, 242, 237, 0.72) 100%
-      );
+      background: linear-gradient(135deg,
+          rgba(255, 252, 249, 0.78) 0%,
+          rgba(255, 250, 247, 0.62) 50%,
+          rgba(248, 242, 237, 0.72) 100%);
       backdrop-filter: blur(40px) saturate(1.8);
       -webkit-backdrop-filter: blur(40px) saturate(1.8);
       border-radius: var(--radius-card);
@@ -501,13 +550,11 @@
       inset: -1px;
       border-radius: calc(var(--radius-card) + 1px);
       padding: 1px;
-      background: linear-gradient(
-        160deg,
-        rgba(155, 27, 48, 0.15) 0%,
-        transparent 30%,
-        transparent 70%,
-        rgba(155, 27, 48, 0.08) 100%
-      );
+      background: linear-gradient(160deg,
+          rgba(155, 27, 48, 0.15) 0%,
+          transparent 30%,
+          transparent 70%,
+          rgba(155, 27, 48, 0.08) 100%);
       -webkit-mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
       mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
       -webkit-mask-composite: xor;
@@ -523,14 +570,12 @@
       left: 10%;
       right: 10%;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.8) 20%,
-        rgba(255, 255, 255, 0.9) 50%,
-        rgba(255, 255, 255, 0.8) 80%,
-        transparent
-      );
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8) 20%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0.8) 80%,
+          transparent);
       border-radius: 0 0 50% 50%;
       pointer-events: none;
     }
@@ -586,9 +631,45 @@
     }
 
     /* Dynamic positioning for cards */
-    .step--1 { justify-content: flex-start; padding-left: 6vw; }
-    .step--2 { justify-content: flex-end; padding-right: 6vw; }
-    .step--3 { justify-content: flex-start; padding-left: 8vw; }
+    .step--1 {
+      justify-content: flex-start;
+      padding-left: 6vw;
+    }
+
+    .step--2 {
+      justify-content: flex-end;
+      padding-right: 6vw;
+    }
+
+    .step--3 {
+      justify-content: flex-start;
+      padding-left: 8vw;
+    }
+
+    .step--4 {
+      justify-content: flex-end;
+      padding-right: 6vw;
+    }
+
+    .step--5 {
+      justify-content: flex-start;
+      padding-left: 6vw;
+    }
+
+    .step--6 {
+      justify-content: flex-end;
+      padding-right: 8vw;
+    }
+
+    .step--7 {
+      justify-content: flex-start;
+      padding-left: 6vw;
+    }
+
+    .step--8 {
+      justify-content: flex-end;
+      padding-right: 6vw;
+    }
 
     /* ── Footer ──────────────────────────────────────────── */
     .footer {
@@ -639,6 +720,7 @@
 
     .footer__brand {
       margin-top: 2rem;
+      margin-bottom: 8rem;
       font-family: var(--font-sans);
       font-size: 0.65rem;
       font-weight: 400;
@@ -646,6 +728,135 @@
       text-transform: uppercase;
       color: var(--c-text-light);
       opacity: 0;
+    }
+
+    /* ── Dietro Le Quinte / Making Of Modal ──────────────── */
+    .btn-making-of {
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      border: 1px solid var(--c-crimson);
+      color: var(--c-crimson);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .btn-making-of:hover {
+      background: var(--c-crimson);
+      color: var(--c-surface);
+      box-shadow: 0 10px 30px var(--c-crimson-glow);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s var(--ease-out-quart);
+    }
+
+    .modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 20, 19, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 1;
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      z-index: 10;
+      padding: 1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .modal__close:hover {
+      color: white;
+      transform: rotate(90deg);
+    }
+
+    .modal__content {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      padding: 6rem 1rem 4rem;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .modal__content::-webkit-scrollbar {
+      display: none;
+      /* Chrome/Safari */
+    }
+
+    .modal__gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .modal__item {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .modal__item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .modal__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 4rem 2rem 1.75rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+      color: rgba(255, 255, 255, 0.95);
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 300;
+      text-align: center;
+      pointer-events: none;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
     /* ── Page Transition Overlay ──────────────────────────── */
@@ -668,9 +879,17 @@
 
     /* ── Responsive ──────────────────────────────────────── */
     @media (max-width: 768px) {
-      body { cursor: auto; }
-      .cursor { display: none !important; }
-      .nav-dots { display: none; }
+      body {
+        cursor: auto;
+      }
+
+      .cursor {
+        display: none !important;
+      }
+
+      .nav-dots {
+        display: none;
+      }
 
       .step {
         justify-content: center !important;
@@ -682,7 +901,12 @@
       }
 
       .step--2,
-      .step--3 {
+      .step--3,
+      .step--4,
+      .step--5,
+      .step--6,
+      .step--7,
+      .step--8 {
         min-height: 120vh;
       }
 
@@ -692,8 +916,13 @@
       }
 
       .image-stage__img {
-        max-width: 85vw;
-        max-height: 55vh;
+        width: 85vw;
+        height: 50vh;
+        top: 40%;
+      }
+
+      .hero__scroll-hint {
+        bottom: 12vh;
       }
 
       .hero__title {
@@ -750,6 +979,11 @@
     <button class="nav-dot" data-target="step1" aria-label="Fase 1"></button>
     <button class="nav-dot" data-target="step2" aria-label="Fase 2"></button>
     <button class="nav-dot" data-target="step3" aria-label="Fase 3"></button>
+    <button class="nav-dot" data-target="step4" aria-label="Fase 4"></button>
+    <button class="nav-dot" data-target="step5" aria-label="Fase 5"></button>
+    <button class="nav-dot" data-target="step6" aria-label="Fase 6"></button>
+    <button class="nav-dot" data-target="step7" aria-label="Fase 7"></button>
+    <button class="nav-dot" data-target="step8" aria-label="Fase 8"></button>
   </nav>
 
   <!-- ── Ambient Background Orbs ─────────────────────── -->
@@ -765,11 +999,6 @@
     <h1 class="hero__title">
       <span class="hero__title-gradient">Melted Heart</span>
     </h1>
-    <p class="hero__subtitle">
-      La creazione artigianale di uno specchio a forma di cuore sciolto.
-      Un viaggio in tre fasi, raccontato scorrendo.
-    </p>
-    <div class="hero__divider"></div>
     <div class="hero__scroll-hint">
       <span>Scorri</span>
       <div class="arrow"></div>
@@ -796,6 +1025,41 @@
           <feDisplacementMap id="disp2" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
             yChannelSelector="G" />
         </filter>
+        <filter id="melt3" x="-15%" y="-15%" width="130%" height="160%">
+          <feTurbulence id="turb3" type="fractalNoise" baseFrequency="0.028 0.006" numOctaves="3" seed="13"
+            result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="4" result="smoothNoise" />
+          <feDisplacementMap id="disp3" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
+            yChannelSelector="G" />
+        </filter>
+        <filter id="melt4" x="-15%" y="-15%" width="130%" height="160%">
+          <feTurbulence id="turb4" type="fractalNoise" baseFrequency="0.028 0.006" numOctaves="3" seed="19"
+            result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="4" result="smoothNoise" />
+          <feDisplacementMap id="disp4" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
+            yChannelSelector="G" />
+        </filter>
+        <filter id="melt5" x="-15%" y="-15%" width="130%" height="160%">
+          <feTurbulence id="turb5" type="fractalNoise" baseFrequency="0.028 0.006" numOctaves="3" seed="23"
+            result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="4" result="smoothNoise" />
+          <feDisplacementMap id="disp5" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
+            yChannelSelector="G" />
+        </filter>
+        <filter id="melt6" x="-15%" y="-15%" width="130%" height="160%">
+          <feTurbulence id="turb6" type="fractalNoise" baseFrequency="0.028 0.006" numOctaves="3" seed="31"
+            result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="4" result="smoothNoise" />
+          <feDisplacementMap id="disp6" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
+            yChannelSelector="G" />
+        </filter>
+        <filter id="melt7" x="-15%" y="-15%" width="130%" height="160%">
+          <feTurbulence id="turb7" type="fractalNoise" baseFrequency="0.028 0.006" numOctaves="3" seed="37"
+            result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="4" result="smoothNoise" />
+          <feDisplacementMap id="disp7" in="SourceGraphic" in2="smoothNoise" scale="0" xChannelSelector="A"
+            yChannelSelector="G" />
+        </filter>
       </defs>
     </svg>
 
@@ -807,6 +1071,22 @@
         draggable="false" />
       <img class="image-stage__img image-stage__img--3" src="fase3.png" alt="Fase 3: I dettagli finali"
         draggable="false" />
+      <img class="image-stage__img image-stage__img--4" src="fase4.png" alt="Fase 4: La copertura in alluminio"
+        draggable="false" />
+      <img class="image-stage__img image-stage__img--5" src="fase5.png" alt="Fase 5: La forma modellata"
+        draggable="false" />
+      <img class="image-stage__img image-stage__img--6" src="fase6.png" alt="Fase 6: La prima mano di colore"
+        draggable="false" />
+      <img class="image-stage__img image-stage__img--7" src="fase7.png" alt="Fase 7: Il colore finale"
+        draggable="false" />
+      <img class="image-stage__img image-stage__img--8" src="fase8.png" alt="Fase 8: Il tocco finale"
+        draggable="false" />
+
+      <!-- Scroll hint visible under the sticky images -->
+      <div class="hero__scroll-hint image-stage__scroll-hint">
+        <span>Scorri</span>
+        <div class="arrow"></div>
+      </div>
     </div>
 
     <!-- Narrative steps -->
@@ -815,11 +1095,9 @@
       <section class="step step--1" id="step1">
         <div class="step__content">
           <p class="step__number">Fase 01</p>
-          <h2 class="step__title">Il blocco di polistirolo</h2>
+          <h2 class="step__title">L'idea</h2>
           <p class="step__text">
-            Tutto inizia da un blocco grezzo di polistirolo.
-            La forma viene tracciata a mano, seguendo l'istinto
-            e il cuore — mai una sagoma è uguale all'altra.
+            Tutto è iniziato da un blocco grezzo di polistirolo.
           </p>
         </div>
       </section>
@@ -827,11 +1105,9 @@
       <section class="step step--2" id="step2">
         <div class="step__content">
           <p class="step__number">Fase 02</p>
-          <h2 class="step__title">Modellazione del DAS</h2>
+          <h2 class="step__title">Dare forma</h2>
           <p class="step__text">
-            Strato dopo strato, il DAS viene applicato e modellato.
-            Le dita plasmano le curve, creando la texture organica
-            che rende ogni pezzo unico e irripetibile.
+            Ho iniziato a dare forma al cuore rifinendo i bordi.
           </p>
         </div>
       </section>
@@ -839,11 +1115,59 @@
       <section class="step step--3" id="step3">
         <div class="step__content">
           <p class="step__number">Fase 03</p>
-          <h2 class="step__title">I primi dettagli</h2>
+          <h2 class="step__title">Dettagli e stagnola</h2>
           <p class="step__text">
-            I bordi vengono affinati, le colature prendono forma.
-            Lo specchio emerge come un cuore che si scioglie,
-            pronto per la finitura finale e la sua nuova vita.
+            Ho ricoperto il cuore di stagnola per poi modellarlo.
+          </p>
+        </div>
+      </section>
+
+      <section class="step step--4" id="step4">
+        <div class="step__content">
+          <p class="step__number">Fase 04</p>
+          <h2 class="step__title">Stagnola</h2>
+          <p class="step__text">
+            Ho ricoperto il cuore interamente di stagnola.
+          </p>
+        </div>
+      </section>
+
+      <section class="step step--5" id="step5">
+        <div class="step__content">
+          <p class="step__number">Fase 05</p>
+          <h2 class="step__title">Prima mano di DAS</h2>
+          <p class="step__text">
+            Ho ricoperto il cuore interamente di DAS per poi modellarlo.
+          </p>
+        </div>
+      </section>
+
+      <section class="step step--6" id="step6">
+        <div class="step__content">
+          <p class="step__number">Fase 06</p>
+          <h2 class="step__title">Levigatura</h2>
+          <p class="step__text">
+            Ho levigato il DAS per renderlo liscio e uniforme.
+          </p>
+        </div>
+      </section>
+
+      <section class="step step--7" id="step7">
+        <div class="step__content">
+          <p class="step__number">Fase 07</p>
+          <h2 class="step__title">Prima mano di primer fissativo</h2>
+          <p class="step__text">
+            Ho passato il primer fissativo per preparare il cuore alla verniciatura.
+          </p>
+        </div>
+      </section>
+
+      <section class="step step--8" id="step8">
+        <div class="step__content">
+          <p class="step__number">Fase 08</p>
+          <h2 class="step__title">Fine</h2>
+          <p class="step__text">
+            Ho verniciato il cuore di rosso fuoco.
           </p>
         </div>
       </section>
@@ -853,13 +1177,53 @@
 
   <!-- ── Footer ────────────────────────────────────────── -->
   <footer class="footer" id="siteFooter">
-    <h2 class="footer__title">Fatto a mano, fatto col cuore.</h2>
-    <p class="footer__subtitle">
-      Ogni Melted Heart è un pezzo unico, plasmato con pazienza e passione.
-    </p>
+    <h2 class="footer__title">Fatto a mano, da me.</h2>
+
+    <!-- Trigger button for the Making Of gallery -->
+    <button class="btn-making-of" id="btnMakingOf" data-magnetic>
+      Guarda il "Dietro le Quinte"
+    </button>
+
     <div class="footer__line"></div>
-    <p class="footer__brand">Seletti × Artigianato Italiano</p>
+    <p class="footer__brand">Buon compleanno amore mio.</p>
   </footer>
+
+  <!-- ── Making Of Modal Overlay ───────────────────────── -->
+  <div class="modal" id="makingOfModal">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <button class="modal__close" id="modalClose" aria-label="Chiudi" data-magnetic>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="modal__content" id="modalContent" data-lenis-prevent>
+      <div class="modal__gallery">
+        <!-- Decreasing order: 5, 4, 3, 2, 1 -->
+        <div class="modal__item">
+          <img src="post5.jpeg" alt="Dietro le quinte - Fase 5" loading="lazy">
+          <div class="modal__caption">Primer per terra. Fatto un casino.</div>
+        </div>
+        <div class="modal__item">
+          <img src="post4.jpeg" alt="Dietro le quinte - Fase 4" loading="lazy">
+          <div class="modal__caption">DAS sull mani. Fatto un casino.</div>
+        </div>
+        <div class="modal__item">
+          <img src="post3.jpeg" alt="Dietro le quinte - Fase 3" loading="lazy">
+          <div class="modal__caption">DAS ovunque.</div>
+        </div>
+        <div class="modal__item">
+          <img src="post2.jpeg" alt="Dietro le quinte - Fase 2" loading="lazy">
+          <div class="modal__caption">Io che cerco di capirci qualcosa.</div>
+        </div>
+        <div class="modal__item">
+          <img src="post1.jpeg" alt="Dietro le quinte - Fase 1" loading="lazy">
+          <div class="modal__caption">Vernice per terra e sulla felpa. Fatto un casino.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Dependencies ──────────────────────────────────── -->
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
@@ -1028,20 +1392,23 @@
 
         // Subtitle — line-by-line reveal
         const subtitleEl = document.querySelector('.hero__subtitle');
-        // Wrap each text node line
-        const subtitleText = subtitleEl.textContent.trim();
-        const sentences = subtitleText.split(/\.\s*/g).filter(s => s.length > 0);
-        subtitleEl.innerHTML = sentences.map(s =>
-          `<span class="line"><span class="line-inner">${s}${s.endsWith('.') ? '' : '.'}</span></span>`
-        ).join(' ');
+        if (subtitleEl) {
+          subtitleEl.style.opacity = 1;
+          // Wrap each text node line
+          const subtitleText = subtitleEl.textContent.trim();
+          const sentences = subtitleText.split(/\.\s*/g).filter(s => s.length > 0);
+          subtitleEl.innerHTML = sentences.map(s =>
+            `<span class="line"><span class="line-inner">${s}${s.endsWith('.') ? '' : '.'}</span></span>`
+          ).join(' ');
 
-        heroTL.to('.hero__subtitle .line-inner', {
-          y: 0,
-          opacity: 1,
-          duration: 1.0,
-          ease: 'power3.out',
-          stagger: 0.15,
-        }, 0.6);
+          heroTL.to('.hero__subtitle .line-inner', {
+            y: 0,
+            opacity: 1,
+            duration: 1.0,
+            ease: 'power3.out',
+            stagger: 0.15,
+          }, 0.6);
+        }
 
         // Divider grows
         heroTL.to('.hero__divider', {
@@ -1090,7 +1457,7 @@
          ══════════════════════════════════════════════════════ */
       const navDotsContainer = document.getElementById('navDots');
       const navDots = document.querySelectorAll('.nav-dot');
-      const sections = ['hero', 'step1', 'step2', 'step3'];
+      const sections = ['hero', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8'];
 
       // Show/hide nav dots based on scroll position
       ScrollTrigger.create({
@@ -1231,12 +1598,30 @@
       const img1 = document.querySelector('.image-stage__img--1');
       const img2 = document.querySelector('.image-stage__img--2');
       const img3 = document.querySelector('.image-stage__img--3');
+      const img4 = document.querySelector('.image-stage__img--4');
+      const img5 = document.querySelector('.image-stage__img--5');
+      const img6 = document.querySelector('.image-stage__img--6');
+      const img7 = document.querySelector('.image-stage__img--7');
+      const img8 = document.querySelector('.image-stage__img--8');
 
       const step2El = document.getElementById('step2');
       const step3El = document.getElementById('step3');
+      const step4El = document.getElementById('step4');
+      const step5El = document.getElementById('step5');
+      const step6El = document.getElementById('step6');
+      const step7El = document.getElementById('step7');
+      const step8El = document.getElementById('step8');
 
       const disp1 = document.getElementById('disp1');
       const disp2 = document.getElementById('disp2');
+      const disp3 = document.getElementById('disp3');
+      const disp4 = document.getElementById('disp4');
+      const disp5 = document.getElementById('disp5');
+      const disp6 = document.getElementById('disp6');
+      const disp7 = document.getElementById('disp7');
+
+      // Flip all images horizontally
+      gsap.set('.image-stage__img', { scaleX: -1 });
 
       function createMeltTransition({ triggerEl, imgOut, imgIn, dispEl, filterId, mobileEnd }) {
         const tl = gsap.timeline({
@@ -1273,18 +1658,24 @@
           ease: 'none',
         }, 0.65);
 
-        // Fade out outgoing image with scale
-        tl.to(imgOut, {
+        // Fade out outgoing image with scale (preserve scaleX flip)
+        tl.fromTo(imgOut, {
+          opacity: 1,
+          scaleX: -1,
+          scaleY: 1
+        }, {
           opacity: 0,
-          scale: 1.02,
+          scaleX: -1.02,
+          scaleY: 1.02,
           duration: 0.6,
           ease: 'power2.in',
+          immediateRender: false
         }, 0.15);
 
-        // Fade in incoming image with subtle scale
+        // Fade in incoming image with subtle scale (preserve scaleX flip)
         tl.fromTo(imgIn,
-          { opacity: 0, scale: 0.98 },
-          { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out', immediateRender: false },
+          { opacity: 0, scaleX: -0.98, scaleY: 0.98 },
+          { opacity: 1, scaleX: -1, scaleY: 1, duration: 0.5, ease: 'power2.out', immediateRender: false },
           0.5
         );
 
@@ -1315,6 +1706,101 @@
         imgIn: img3,
         dispEl: disp2,
         filterId: 'melt2',
+        mobileEnd: 'top 10%',
+      });
+
+      // Transition 3: Fase 3 → Fase 4
+      createMeltTransition({
+        triggerEl: step4El,
+        imgOut: img3,
+        imgIn: img4,
+        dispEl: disp3,
+        filterId: 'melt3',
+        mobileEnd: 'top 10%',
+      });
+
+      // Transition 4: Fase 4 → Fase 5
+      createMeltTransition({
+        triggerEl: step5El,
+        imgOut: img4,
+        imgIn: img5,
+        dispEl: disp4,
+        filterId: 'melt4',
+        mobileEnd: 'top 10%',
+      });
+
+      // Transition 5: Fase 5 → Fase 6
+      createMeltTransition({
+        triggerEl: step6El,
+        imgOut: img5,
+        imgIn: img6,
+        dispEl: disp5,
+        filterId: 'melt5',
+        mobileEnd: 'top 10%',
+      });
+
+      // Transition 6: Fase 6 → Fase 7
+      createMeltTransition({
+        triggerEl: step7El,
+        imgOut: img6,
+        imgIn: img7,
+        dispEl: disp6,
+        filterId: 'melt6',
+        mobileEnd: 'top 10%',
+      });
+
+      function createFinalReveal({ triggerEl, imgOut, imgIn, dispEl, filterId, mobileEnd }) {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerEl,
+            start: isMobile ? 'top 110%' : 'top 80%',
+            end: isMobile ? (mobileEnd || 'top 20%') : 'top -20%',
+            scrub: 2.0,
+            onEnter: () => { imgOut.style.filter = `url(#${filterId})`; },
+            onLeave: () => { imgOut.style.filter = 'none'; },
+            onEnterBack: () => { imgOut.style.filter = `url(#${filterId})`; },
+            onLeaveBack: () => { imgOut.style.filter = 'none'; },
+          },
+        });
+
+        tl.to(dispEl, { attr: { scale: 40 }, duration: 0.3, ease: 'power1.in' }, 0);
+        tl.to(dispEl, { attr: { scale: 120 }, duration: 0.35, ease: 'power2.in' }, 0.3);
+        tl.to(dispEl, { attr: { scale: 160 }, duration: 0.15, ease: 'none' }, 0.65);
+
+        tl.fromTo(imgOut, {
+          opacity: 1,
+          scaleX: -1,
+          scaleY: 1
+        }, {
+          opacity: 0,
+          scaleX: -1.02,
+          scaleY: 1.02,
+          duration: 0.6,
+          ease: 'power2.in',
+          immediateRender: false
+        }, 0.15);
+
+        // Custom epic reveal for fase8:
+        // 1. Starts larger (scaleX/Y 1.1) and scales down to 1.
+        // 2. scaleX stays positive (1) to counteract the global scaleX: -1
+        // 3. Brightness and drop shadow glow effect
+        tl.fromTo(imgIn,
+          { opacity: 0, scaleX: 1.1, scaleY: 1.1, filter: 'brightness(1.5) drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.4))' },
+          { opacity: 1, scaleX: 1, scaleY: 1, filter: 'brightness(1) drop-shadow(0px 0px 0px rgba(255, 255, 255, 0))', duration: 0.8, ease: 'power2.out', immediateRender: false },
+          0.4
+        );
+
+        tl.to(dispEl, { attr: { scale: 0 }, duration: 0.2, ease: 'power3.out' });
+        return tl;
+      }
+
+      // Transition 7: Fase 7 → Fase 8 (Epic Reveal)
+      createFinalReveal({
+        triggerEl: step8El,
+        imgOut: img7,
+        imgIn: img8,
+        dispEl: disp7,
+        filterId: 'melt7',
         mobileEnd: 'top 10%',
       });
 
@@ -1363,27 +1849,29 @@
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero',
-          start: 'top top',
+          start: '30% top',
           end: 'bottom top',
           scrub: 0.5,
         }
       });
 
-      gsap.to('.hero__subtitle', {
-        yPercent: -20,
-        opacity: 0,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: '80% top',
-          scrub: 0.5,
+      gsap.fromTo('.hero__subtitle',
+        { yPercent: 0, opacity: 1 },
+        {
+          yPercent: -20,
+          opacity: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: '80% top',
+            scrub: 0.5,
+          }
         }
-      });
+      );
 
       gsap.to('.hero__overline', {
         yPercent: -40,
-        opacity: 0,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero',
@@ -1392,6 +1880,41 @@
           scrub: 0.5,
         }
       });
+
+      gsap.to('.hero__scroll-hint', {
+        yPercent: -40,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: '70% top',
+          scrub: 0.5,
+        }
+      });
+
+      /* ══════════════════════════════════════════════════════
+         MAKING OF MODAL
+         ══════════════════════════════════════════════════════ */
+      const btnMakingOf = document.getElementById('btnMakingOf');
+      const makingOfModal = document.getElementById('makingOfModal');
+      const modalCloseBtn = document.getElementById('modalClose');
+      const modalBackdrop = document.getElementById('modalBackdrop');
+
+      function openModal() {
+        makingOfModal.classList.add('is-open');
+        lenis.stop(); // Prevent background scrolling
+      }
+
+      function closeModal() {
+        makingOfModal.classList.remove('is-open');
+        lenis.start(); // Resume background scrolling
+      }
+
+      if (btnMakingOf && makingOfModal) {
+        btnMakingOf.addEventListener('click', openModal);
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+      }
 
     })();
   </script>
